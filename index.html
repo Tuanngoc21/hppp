@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=D ancing+Script:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="main.css">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .backgroundParty {
+      background-image: url("./img/z4355482874620_b1d041ab7f0dbd40efd64bfdac44b1f8.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    /* Thêm các quy tắc CSS khác tại đây */
+  </style>
+  <style>
+    .gift-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+    }
+    .gift {
+      width: 100px;
+      height: 100px;
+      cursor: pointer;
+      margin-left: 10px;
+      transition: transform 0.3s;
+      animation: shakeAnimation 1s infinite;
+    }
+    .gift:hover {
+      transform: scale(1.1);
+    }
+    @keyframes shakeAnimation {
+      0% { transform: rotate(0deg); }
+      20% { transform: rotate(-10deg); }
+      40% { transform: rotate(10deg); }
+      60% { transform: rotate(-10deg); }
+      80% { transform: rotate(10deg); }
+      100% { transform: rotate(0deg); }
+    }
+  </style>
+  
+  <title>Chúc mừng sinh nhật </title>
+</head>
+<body>
+
+
+  <div class="startForm">
+    <div class="startLetter">
+      <div class="contentLetter"></div>
+      <img class="myAI" src="" alt="">
+      <div class="sticker"></div>
+      <button class="recieve"><i class="fa-solid fa-gift"></i></button>
+    </div>
+  </div>
+
+  <div class="backgroundParty">
+    <img class="balloon1 balloon" src="./img/PNGkhothietke.net-02776.png" alt="">
+    <img class="balloon2 balloon" src="./img/PNGkhothietke.net-02776.png" alt="">
+    <img class="bannerParty" src="./img/makeupspa-kit-theme-happy-birthday-bunting-paper-banner-party-supply-261454.png" alt="">
+    <div class="gift-container">
+      <img class="gift" id="gift1" src="./img/zyro-image (2).png" alt="Gift 1">
+      <img class="gift" id="gift2" src="/img/zyro-image (3).png" alt="Gift 2">
+    </div>
+    <div id="letter1" class="letter">
+      <h2>M mở cái này đầu tiên hả</h2>
+      <p>Chúc mừng sinh nhật tuổi 19! Chúc m có một ngày sinh nhật thật vui vẻ và ý nghĩa. Mong rằng tuổi 19 sẽ mang đến cho m nhiều niềm vui, thành công và những trải nghiệm đáng nhớ. Hãy tiếp tục nỗ lực và phấn đấu để đạt được những ước mơ và mục tiêu trong cuộc sống. Xin chúc m luôn khỏe mạnh, hạnh phúc và tràn đầy năng lượng. Sinh nhật vui vẻ </p>
+    </div>
+    
+    <div id="letter2" class="letter">
+      <h2></h2>
+      <p>Thật ra  cái này t cũng không muốn viết mô, vì đây là sinh nhật m t nghĩ sau này t sẽ nói ra nhưng mà sợ t sẽ không có cơ hội nữa. Đọc đến đây thì m có thể đóng lại rồi để ngày mai hẵng đọc.
+Nói thì m không tin đâu, m từng là người con gái quan trọng nhất đối với t ở quá khứ và hiện tại đều thế, m là người con gái duy nhất mà khiến t rơi nước mắt, trước đây t chưa từng nghĩ t có thể khóc bởi 1 lí do gì, nhưng mà sau khi gặp m lại khác. T chưa từng thương ai nhiều đến thế cả. Nếu mà t có 1 điều ước thì t chỉ ước quay lại năm ngoái để yêu m với thương m nhiều hơn thôi. Nhiều đêm mơ mà trong vô thức t còn nói được t yêu m nữa. Nhưng mà nói rứa thôi chớ t cũng chưa từng nghĩ t với m có thể quay lại hay còn là gì của nhau nữa. Dù sao thì bây giờ cũng là sinh nhật m, t cũng lấy hết can đảm để nói ra, ít nhất cũng vơi đi nhất niệm trong lòng t, t cũng sẽ có thể từ bỏ. Chúc mừng sinh nhật của m nhé. </p>
+    </div>
+    
+    <div class="letterForm">
+      <input type="checkbox" id="mess">
+      <div class="content">
+        <div class="mainContent"></div>
+        <div class="img1"><img class="img" src="" alt=""></div>
+      </div>
+      <label class="designBox" for="mess"></label>
+    </div>
+  </div>
+  
+    </style>
+    <script>
+      document.getElementById("gift1").addEventListener("click", function() {
+        openLetter("letter1"); // Thay thế "letter1" bằng ID phù hợp cho bức thư 1
+      });
+    
+      document.getElementById("gift2").addEventListener("click", function() {
+        openLetter("letter2"); // Thay thế "letter2" bằng ID phù hợp cho bức thư 2
+      });
+    
+      function openLetter(letterId) {
+        // Ẩn tất cả các bức thư trước khi mở bức thư mới
+        var letters = document.getElementsByClassName("letter");
+        for (var i = 0; i < letters.length; i++) {
+          letters[i].style.display = "none";
+        }
+    
+        // Hiển thị bức thư được chọn
+        var letterElement = document.getElementById(letterId);
+        letterElement.style.display = "block";
+      }
+    </script>
+    <script>
+      function showTextByParagraph(elementId, delay) {
+        const element = document.getElementById(elementId);
+        const paragraphs = element.getElementsByTagName("p");
+        let index = 0;
+    
+        function displayNextParagraph() {
+          if (index < paragraphs.length) {
+            paragraphs[index].style.display = "block";
+            index++;
+            setTimeout(displayNextParagraph, delay);
+          }
+        }
+    
+        displayNextParagraph();
+      }
+    
+      const letter1Delay = 1000; // Trễ 1000ms giữa mỗi đoạn văn bản trong bức thư 1
+      const letter2Delay = 1000; // Trễ 1000ms giữa mỗi đoạn văn bản trong bức thư 2
+    
+      showTextByParagraph("letter1", letter1Delay);
+      showTextByParagraph("letter2", letter2Delay);
+    </script>
+    
+        </script>
+
+  <script src="./index.js"></script>
+  
+</body>
+</html>
